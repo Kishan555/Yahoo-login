@@ -1,12 +1,15 @@
 <html>
- 
-        <script src="https://s.yimg.com/os/yaft/yaft-0.3.15.min.js"></script>
+ <head>
+  <script src="https://s.yimg.jp/images/login/yconnect/auth/1.0.3/auth-min.js"></script>
+
+ </head>
+      
 <script>
   window.yahooSignIn = function() {
     var config = {
       consumerKey: 'dj0yJmk9Qlpha2hFV2FURjRVJmQ9WVdrOWMzRnpkSFZ5U2xBbWNHbzlNQT09JnM9Y29uc3VtZXJzZWNyZXQmc3Y9MCZ4PThl',
       consumerSecret: '8231a28c85500bd0f87d06ac2d7d0cdbcd6f6143',
-      callback: 'https://kishan555.github.io/Yahoo/'
+      callback: 'https://kishan555.github.io/Yahoo/callback'
     };
     window.yahooSDK.oauth2.popupAuthorization(config, function(err, data) {
       if (err) {
@@ -21,11 +24,8 @@
 
 </script>
 
-  
     
     <body>
         <button onclick="yahooSignIn()">Sign in with Yahoo</button>
-
-    
     </body>
 </html>
