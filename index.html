@@ -1,9 +1,8 @@
 <html>
  <head>
   <script src="https://s.yimg.jp/images/login/yconnect/auth/1.0.3/auth-min.js"></script>
-
  </head>
-      
+
 <script>
   function yahooSignIn() {
     var config = {
@@ -16,17 +15,14 @@
       } else {
         console.log(data);
         // Use the access token to authenticate the user and access their Yahoo profile information
+        var accessToken = data.access_token;
+        console.log(accessToken);
       }
     });
   };
-// Use the access token to authenticate the user and access their Yahoo profile information
-var accessToken = data.access_token;
-// Use the access token to authenticate the user and access their Yahoo profile information
-
 </script>
-
     
-    <body>
-        <button onclick="yahooSignIn()">Sign in with Yahoo</button>
-    </body>
+<body>
+  <button onclick="yahooSignIn()">Sign in with Yahoo</button>
+</body>
 </html>
